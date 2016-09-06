@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task30-1</title>
+    <style>
+        div{
+            width: 200px;
+            margin: 5px;
+            position: absolute;
+            transition: 1s;
+        }
+        .fall{
+            display: none;
+        }
+        .h1{
+            background: yellow;
+            height: 400px;
+        }
+        .h2{
+            background: blue;
+            height: 500px;
+        }
+        .h3{
+            background: darkgreen;
+            height: 350px;
+        }
+        .h4{
+            background: darkred;
+            height: 450px;
+        }
+        .h5{
+            background: yellow;
+            height: 500px;
+        }
+        .h6{
+            background: darkblue;
+            height: 500px;
+        }
+        .h7{
+            background: yellowgreen;
+            height: 400px;
+        }
+        .h8{
+            background: yellow;
+            height: 270px;
+        }
+        .h9{
+            background: darkolivegreen;
+            height: 350px;
+        }
+        .h10{
+            background: brown;
+            height: 550px;
+        }
+        .h11{
+            background: brown;
+            height: 550px;
+        }
+        .h12{
+            background: blue;
+            height: 500px;
+        }
+        .h13{
+            background: darkgreen;
+            height: 600px;
+        }
+        .h14{
+            background: darkred;
+            height: 280px;
+        }
+        .h15{
+            background: yellow;
+            height: 500px;
+        }
+        .h16{
+            background: darkblue;
+            height: 500px;
+        }
+        .h17{
+            background: yellowgreen;
+            height: 400px;
+        }
+        .h18{
+            background: yellow;
+            height: 280px;
+        }
+        .h19{
+            background: darkolivegreen;
+            height: 250px;
+        }
+        .h20{
+            background: brown;
+            height: 550px;
+        }
+        .h21 {
+            background: chocolate;
+            height: 350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fall h1">1</div>
+    <div class="fall h2">2</div>
+    <div class="fall h3">3</div>
+    <div class="fall h4">4</div>
+    <div class="fall h5">5</div>
+    <div class="fall h6">6</div>
+    <div class="fall h7">7</div>
+    <div class="fall h8">8</div>
+    <div class="fall h9">9</div>
+    <div class="fall h10">10</div>
+    <div class="fall h11">11</div>
+    <div class="fall h12">12</div>
+    <div class="fall h13">13</div>
+    <div class="fall h14">14</div>
+    <div class="fall h15">15</div>
+    <div class="fall h16">16</div>
+    <div class="fall h17">17</div>
+    <div class="fall h18">18</div>
+    <div class="fall h19">19</div>
+    <div class="fall h20">20</div>
+    <div class="fall h21">21</div>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+    <script>
+
+        var water = (function(){
+            function waterfall(){
+                var windowWidth = $(window).width(),
+                        divWidth = $(".fall").outerWidth(true),
+                        columnNum = parseInt( windowWidth/divWidth ),
+                        array = [],
+                        minIdx = 0,
+                        minHeight = 0;
+                for(var i=0;i<columnNum;i++){
+                    array.push(0);
+                }
+                $(".fall").each(function(){
+                    for(var j=0;j<array.length;j++){
+                        if(array[j]<minHeight){
+                            minHeight = array[j];
+                            console.log(j)
+                            minIdx = j;
+                        }
+                    }
+                    $(this).css({
+                        left: divWidth * minIdx,
+                        top: minHeight
+                    })
+                    array[minIdx] += $(this).outerHeight(true);
+                    minHeight = array[minIdx];
+                })
+            }
+            waterfall();
+            $(".fall").show();
+            $(window).on("resize",function(){
+                waterfall();
+            })
+            return{
+                init: waterfall
+            }
+        })()
+    </script>
+</body>
+</html>

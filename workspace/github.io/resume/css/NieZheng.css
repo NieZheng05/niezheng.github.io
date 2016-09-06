@@ -1,0 +1,174 @@
+body{
+    font-family:'Helvetica Neue',Helvetica,'Lucida Grande',Arial,'Hiragino Sans GB',微软雅黑,'WenQuanYi Micro Hei',STHeiti,SimSun,sans-serif;
+}
+html,body,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #ccc;
+}
+ul{
+    list-style: none;
+}
+.clear{
+    content: "";
+    display: block;
+    clear: both;
+}
+.boldH{
+    font-size: 22px;
+    line-height: 22px;
+    color: #0896bf;
+    font-family: 'Helvetica Neue',Helvetica,'Lucida Grande',Arial,
+    'Hiragino Sans GB',微软雅黑,'WenQuanYi Micro Hei',STHeiti,SimSun,sans-serif;
+}
+#fixRight{
+    height: 200px;
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    margin-top: -100px;
+    z-index: 99;
+}
+#fixRight>ul>li{
+    width: 100px;
+    padding: 5px;
+    background: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+#fixRight a{
+    text-decoration: none;
+    color: #006400;
+}
+#myPresentation{
+    position: relative;
+    margin: 20px auto;
+    width: 80%;
+}
+#left-aside{
+    float: left;
+    padding-top: 50px;
+    text-align: center;
+    width: 200px;
+    background: #0aaabf;
+}
+#left-aside .showMe img{
+    margin-top: 30%;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+#left-aside .self-information li:nth-child(6){
+    margin-top: 30%;
+}
+#left-aside .weChat img{
+    margin-top: 10px;
+    width: 80%;
+    height: 150px;
+}
+#left-aside .my-resume{
+    margin-top: 50%;
+}
+#left-aside .my-resume img{
+    marging-top: 10px;
+    height: 160px;
+}
+#left-aside .self-skills{
+    margin-top: 50%;
+}
+#left-aside .self-skills .name{
+    text-align: left;
+}
+.self-skills .name,.skill{
+    display: inline-block;
+}
+.self-skills p{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.self-skills .range{
+    float: left;
+    width: 150px;
+    height: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background: green;
+}
+.self-skills .rangeX1{
+    width: 65%;
+    height: 100%;
+    border-radius: 15px 0px 0px 15px;
+    background: #fff;
+}
+.self-skills .rangeX2{
+    width: 70%;
+    height: 100%;
+    border-radius: 15px 0px 0px 15px;
+    background: #fff;
+}
+.self-skills .rangeX3{
+    width: 70%;
+    height: 100%;
+    border-radius: 15px 0px 0px 15px;
+    background: #fff;
+}
+.self-skills .rangeX4{
+    width: 85%;
+    height: 100%;
+    border-radius: 15px 0px 0px 15px;
+    background: #fff;
+}
+.lp{
+    padding-left: 240px;
+}
+#mainCt{
+    margin: 20px 0;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    background: #eee;
+}
+.skill-head{
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+#mainCt .RT{
+    padding: 3px 5px;
+    float: right;
+    margin-top: 1%;
+    border-radius: 10px;
+    background: #0aaabf;
+}
+#mainCt .RT a{
+    text-decoration: none;
+    color: white;
+    background: #0aaabf;
+}
+.experiance-head{
+    margin-bottom: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.experiance li a{
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #ccc;
+    border-radius:7px;
+    color: #000;
+    text-decoration: none;
+}
+.workExperiance-head{
+    padding: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+h4{
+    margin: 0;
+    font-size: 18px;
+    line-height: 22px;
+    height: 22px;
+    font-family: 'Helvetica Neue',Helvetica,'Lucida Grande',Arial,
+    'Hiragino Sans GB',微软雅黑,'WenQuanYi Micro Hei',STHeiti,SimSun,sans-serif;
+}
